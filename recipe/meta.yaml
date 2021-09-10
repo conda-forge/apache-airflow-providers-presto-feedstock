@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-presto" %}
-{% set version = "2.0.0" %}
+{% set version = "2.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-presto-{{ version }}.tar.gz
-  sha256: 87d08da2efe717410880aa37e869c14731f1b33351d0402337d212e72d1bfe19
+  sha256: 680c73a077246605fe62c808b98d199baaff466421fd6343d6fc57482ee0d0fa
 
 build:
   number: 0
