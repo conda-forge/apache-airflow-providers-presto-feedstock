@@ -16,14 +16,14 @@ build:
 
 requirements:
   host:
+    - python >=3.6
     - pip
-    - python >=3.6
     - setuptools
-    - wheel
   run:
-    - apache-airflow >=2.1.0
-    - presto-python-client >=0.7.0,<0.8
     - python >=3.6
+    - apache-airflow >=2.1.0
+    - pandas >=0.17.1,<1.4
+    - presto-python-client >=0.7.0,<0.8
 
 test:
   imports:
