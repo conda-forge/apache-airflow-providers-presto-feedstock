@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-presto" %}
-{% set version = "2.0.1" %}
+{% set version = "2.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-presto-{{ version }}.tar.gz
-  sha256: 680c73a077246605fe62c808b98d199baaff466421fd6343d6fc57482ee0d0fa
+  sha256: b074f5f8e17644a3ea4a9134b4a4ca1e0b4222e69130110d9a9d9e60acfad75c
 
 build:
   number: 0
@@ -16,14 +16,14 @@ build:
 
 requirements:
   host:
+    - python >=3.6
     - pip
-    - python >=3.6
     - setuptools
-    - wheel
   run:
-    - apache-airflow >=2.1.0
-    - presto-python-client >=0.7.0,<0.8
     - python >=3.6
+    - apache-airflow >=2.1.0
+    - pandas >=0.17.1,<1.4
+    - presto-python-client >=0.7.0,<0.8
 
 test:
   imports:
