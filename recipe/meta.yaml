@@ -10,25 +10,25 @@ source:
   sha256: 6563ec6bf0e9305092482e7ebbcaa3665425eeee78c175dd7feced3ee7e37391
 
 build:
-  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
+  number: 0
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
     - pip
     - setuptools
   run:
-    - python >=3.6
+    - python >=3.7
     - apache-airflow >=2.1.0
-    - pandas >=0.17.1,<1.4
+    - pandas >=0.17.1
     - presto-python-client >=0.7.0,<0.8
 
 test:
   imports:
     - airflow.providers.presto
-    - airflow.providers.presto.hooks
+    - airflow.providers.presto.example_dags
   commands:
     - pip check
   requires:
@@ -36,9 +36,10 @@ test:
 
 about:
   home: https://airflow.apache.org/
-  summary: Provider for Presto for Apache Airflow
+  summary: Provider for Apache Airflow. Implements apache-airflow-providers-presto package
   license: Apache-2.0
   license_file: LICENSE
+  license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-presto/stable/index.html
   dev_url: https://github.com/apache/airflow/
 
