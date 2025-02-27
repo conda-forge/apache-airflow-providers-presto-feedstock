@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-presto" %}
-{% set version = "5.8.0" %}
+{% set version = "5.8.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_presto-{{ version }}.tar.gz
-  sha256: bae1d185956e231cfb5f82b33e1acabfcb3b7930c171a5abb1018853dffb6b9a
+  sha256: ebe46247f801a8d0efdae80dcffcae736fe5ee6f6c3f5376e756a30b46deb19a
 
 build:
   noarch: python
@@ -21,10 +21,10 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - apache-airflow-providers-common-sql >=1.20.0
     - apache-airflow >=2.9.0
-    - pandas >=2.1.2,<2.2
+    - apache-airflow-providers-common-sql >=1.20.0
     - presto-python-client >=0.8.4
+    - pandas >=2.1.2,<2.2
 
 test:
   imports:
@@ -39,7 +39,7 @@ about:
   home: https://github.com/apache/airflow/
   summary: Provider package apache-airflow-providers-presto for Apache Airflow
   license: Apache-2.0
-  license_file: airflow/providers/presto/LICENSE
+  license_file: src/airflow/providers/presto/LICENSE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-presto/stable/index.html
   dev_url: https://github.com/apache/airflow/
