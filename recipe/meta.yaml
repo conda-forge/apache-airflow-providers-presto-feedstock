@@ -21,10 +21,10 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - apache-airflow-providers-common-sql >=1.20.0
     - apache-airflow >=2.9.0
-    - pandas >=2.1.2,<2.2
+    - apache-airflow-providers-common-sql >=1.20.0
     - presto-python-client >=0.8.4
+    - pandas >=2.1.2,<2.2
 
 test:
   imports:
@@ -39,7 +39,7 @@ about:
   home: https://github.com/apache/airflow/
   summary: Provider package apache-airflow-providers-presto for Apache Airflow
   license: Apache-2.0
-  license_file: airflow/providers/presto/LICENSE
+  license_file: src/airflow/providers/presto/LICENSE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-presto/stable/index.html
   dev_url: https://github.com/apache/airflow/
