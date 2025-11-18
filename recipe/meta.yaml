@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-presto" %}
-{% set version = "5.9.3" %}
+{% set version = "5.9.4" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_presto-{{ version }}.tar.gz
-  sha256: 6e885f1c183424b839711f98b8a4b1f41c39094291d541429916826a1562b9ae
+  sha256: edefeaa52088f9103fb8b5aaf0d72ef25b8092057a485b6b85670d86e258b947
 
 build:
   noarch: python
@@ -21,12 +21,14 @@ requirements:
     - flit-core ==3.12.0
     - pip
   run:
+    - apache-airflow-providers-common-compat >=1.8.0
+    - psycopg2-binary >=2.9.9
     - python >={{ python_min }}
     - apache-airflow >=2.10.0
     - apache-airflow-providers-common-sql >=1.26.0
     - presto-python-client >=0.8.4
     # more restrictive for python >= 3.13
-    - pandas >=2.2.3
+    - pandas >=2.1.2
 
 test:
   imports:
