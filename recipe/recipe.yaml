@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-presto
-  version: "5.10.1"
+  version: "5.10.2"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_presto-${{ version }}.tar.gz
-  sha256: 8d39fec0af762fd81229ad6395e759fec8ff1c0b0c98a616c0e32663b39c6df4
+  sha256: fa3fdf1f41b6df2d7de475617118c9b48bc934f8c99155a405f70b91f00779e7
 
 build:
   noarch: python
@@ -34,7 +34,7 @@ requirements:
 tests:
   - python:
       imports:
-      - airflow.providers.presto
+        - airflow.providers.presto
       pip_check: true
       python_version: ${{ python_min }}.*
 
