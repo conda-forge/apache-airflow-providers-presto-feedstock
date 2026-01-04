@@ -34,7 +34,7 @@ requirements:
 tests:
   - python:
       imports:
-        - airflow.providers.presto
+      - airflow.providers.presto
       pip_check: true
       python_version: ${{ python_min }}.*
 
