@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-presto
-  version: "5.10.3"
+  version: "5.11.0"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_presto-${{ version }}.tar.gz
-  sha256: 2456b321542608745cd8360c1ff576d05dc472364273eb73a12cdcaf6a852546
+  sha256: 0a990088ad7eb9f62149803c7aac05e004b508be4ed4fd537ba628f751db41fc
 
 build:
   noarch: python
@@ -24,7 +24,7 @@ requirements:
     - python >=${{ python_min }}
     - apache-airflow >=2.11.0
     - apache-airflow-providers-common-compat >=1.12.0
-    - apache-airflow-providers-common-sql >=1.26.0
+    - apache-airflow-providers-common-sql >=1.32.0
     - presto-python-client >=0.8.4
     # more restrictive for python >=3.13
     - pandas >=2.2.3
