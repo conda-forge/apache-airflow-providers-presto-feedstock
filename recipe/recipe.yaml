@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-presto
-  version: "5.11.2"
+  version: "5.12.0"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_presto-${{ version }}.tar.gz
-  sha256: 9eceeeb4d485192ab0b1f7358302ef3a33855abfd82a02cb8ecb4e05818b2d5a
+  sha256: a3a450d7974a9e1c3b85d048561c7d6d1a594a49feb107f53b1469e0555f04c5
 
 build:
   noarch: python
