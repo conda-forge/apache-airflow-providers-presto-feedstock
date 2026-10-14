@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-presto
-  version: 5.13.0
+  version: 5.13.1
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_presto-${{ version }}.tar.gz
-  sha256: eef14b57bca62f9d43ac1f1c2aeb5def672862c0babce9c5e3cb0a1b8d6f72fd
+  sha256: 1d2847b9c6dbeaf94fb3606470418fc36ce13ac0b5082da0d786721ca638b30d
 
 build:
   noarch: python
@@ -19,7 +19,7 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - flit-core ==4.0.2
+    - flit-core ==4.1.0
   run:
     - python >=${{ python_min }}
     - apache-airflow >=2.11.0
